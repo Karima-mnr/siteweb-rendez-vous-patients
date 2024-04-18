@@ -1,0 +1,212 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    scroll-behavior: smooth; 
+    list-style: none; 
+    text-decoration: none; 
+} 
+header { 
+    position: auto; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    padding: 20px 100px; 
+    background-color:transparent; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    z-index: 1000; 
+     
+ 
+}  
+.Logo { 
+    font-size: 32px; 
+    color: #333; 
+    text-decoration: none; 
+    font-weight: 700; 
+    pointer-events: none; 
+    filter: drop-shadow(0 0 5px white);  
+}  
+ 
+.navbar a { 
+    position: relative; 
+    font-size: 18px; 
+    color: #333; 
+    text-decoration: none; 
+    font-weight: 500; 
+    margin-right: 40px; 
+    text-transform: capitalize; 
+    transition:all .42s ; 
+}  
+ 
+.navbar a::after{ 
+    content: ''; 
+    position: absolute; 
+    width:0; 
+    height: 2px; 
+    background:#51afe9; 
+    bottom: -2px; 
+    left: 0; 
+    transition: all .42s; 
+} 
+ 
+.navbar a:hover::after{ 
+    width: 100%; 
+} 
+.navbar .btnLogin-popup { 
+    width: 150px; 
+    background-color: #51afe9; 
+    border: none; 
+    outline: none; 
+    height: 49px; 
+    border-radius: 49px; 
+    color: #333; 
+    text-transform: uppercase; 
+    font-weight: 600; 
+    margin: 10px 0; 
+    cursor: pointer; 
+    transition: 0.5s; 
+}
+.navbar .btnLogin-popup:hover{
+    background-color: transparent;
+    color: #333;
+  }
+
+
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    margin-top: 20px; /*----------------------------------------------------------------------------------*/
+    height: 5px;
+    filter: drop-shadow(0 0 5px #51afe9);
+}
+    
+.heading span{
+    text-transform: uppercase;
+    color: #51afe9;  
+
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+
+}
+.card_container{
+    display: grid;
+    row-gap: 3.5rem;
+}
+.card_article{
+    position: relative;
+    overflow: hidden;
+}
+.card_img{
+    width: 100px;
+    height: 380px;
+    border-radius: 1.5rem;
+    margin-bottom: 70px;
+    margin: 15px;
+}
+.card_data{
+    text-align: center;
+    width: 280px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    margin-left: 50px;
+    margin-left: 150px;
+    margin-bottom: 40px;
+    transition: opacity 1s 1s;
+}
+.card_description{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+.card_title{
+    font-size: 20px;
+    font-weight: 1000;
+    color:#51afe9;
+    margin-bottom: .75rem;
+}
+.card_article:hover .card_data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.card_article:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card_article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+.card_article:not(:hover) .card_data{
+    animation: remove-data 1s forwards;
+}
+@keyframes show-data{
+    50%{
+        transform: translate(-10rem);
+    }
+    100%{
+        transform: translate(-7rem);
+    }
+}
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+@keyframes remove-data{
+    0%{
+        transform: translate(-7rem);
+    }
+    50%{
+        transform: translate(-10rem);
+    }
+    100%{
+        transform: translate(.5rem);
+    }
+}
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 1120px){
+    .container{
+        height: 100vh;
+    }
+    .card_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card_img{
+        width: 348px;
+    }
+    .card_data{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+    
+}
+
+

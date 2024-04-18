@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #dfe9f5;
+} 
+/* ---------- navmenu---------------------------------------*/
+
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: 1s;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    
+}
+nav:hover{
+    width: 280px;
+    transition: 1s;
+  }
+.logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    padding-bottom: 3rem;
+  }
+  
+  .logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  a{
+    position: relative;
+    width: 280px;
+    font-size: 14px;
+    color: rgb(85, 83, 83);
+    display: table;
+    padding: 10px;
+  } 
+
+nav .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+  }
+a:hover{
+    background: #eee;
+}
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+}
+.bottom{
+    margin-top: 200px;
+}
+a:hover i{
+    color: #51afe9;
+    transition: 0.5s;
+  }
+/*----------------------------------------------------------------------------*/
+
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 100px;
+    margin-left: 70px;
+   
+
+}
+.card{
+    width: 300px;
+    height: 450px;
+    background-color: #f4f4f4;
+    border-radius: 35px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3) ;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+    
+    
+    
+}
+.card:hover{
+    transform: translateY(-20px);
+}
+.card img{
+    width:300px;
+    height: 200px;
+    height: auto;
+    object-fit: cover;
+}
+.card .img1 {
+    height: 280px;
+}
+.card-content{
+    padding: 20px;
+}
+.card .im3 {
+    height: 280px;
+}
+.card .img2 {
+    height: 280px;
+}
+
+.card-content h1{
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #51afe9;
+    left: 50%;
+    right: 50%;
+    filter: drop-shadow(0 0 5px #79c6f7);
+    text-transform: uppercase;
+}
+.card p{
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.card-content a{ 
+
+    color: #333;
+    font-size: 15px;
+    text-transform: uppercase;
+    
+}
+.card-button{
+    font-size: 15px;
+    width: 150px;
+    background-color:#51afe9;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    left:30%;
+    right: 70%;
+}
+    /*
+    width: 130px;
+    display: inline-block;
+    background-color: #51afe9;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    left: 50%;
+    right: 50%;
+    */
+    
+

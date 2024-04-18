@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+h1{
+    margin: 0;
+    color: #51afe9;
+    filter: drop-shadow(0 0 5px #94d0f5);
+    text-transform: uppercase;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("https://stock.adobe.com/search?k=subtle%20patterns"), linear-gradient(to bottom,  #1b90da , rgb(234, 224, 224));
+}  
+   
+.otp-card{
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px -20px black ;
+
+}
+.otp-card-inputs{
+    margin: 30px 0;
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(5 ,auto);
+}
+.otp-card-inputs input{
+    width: 60px;
+    height: 70px;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.otp-card-inputs input:focus{
+    outline: 2px solid #51afe9;
+    border-color: transparent;
+}
+.otp-card button{
+    background-color: #51afe9;
+    border: none;
+    padding: 15px 50px;
+    font-size: 18px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.otp-card button:hover{
+    opacity: .9;
+}
+.otp-card button[disabled]{
+    opacity: .6;
+    cursor: default;
+}
