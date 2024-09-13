@@ -17,7 +17,6 @@
               <img src="log.png">
               <span class="nav-item">User</span>
             </a></li>
-
             <li><a href="home.php">
             <i class=" fas fa-solid fa-house-medical"></i>
                 <span class="nav-item">Home</span>
@@ -40,7 +39,10 @@
               <i class="fas fa-cog"></i>
               <span class="nav-item">Setting</span>
             </a></li>
-    
+            <li><a href="signIn.php" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
           
           </ul>
         </nav>

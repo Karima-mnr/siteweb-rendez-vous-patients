@@ -95,7 +95,7 @@ if (isset($_POST["submit"])) {
                          </div>
                          <div class="btnn">
                             <button class="submit-btn" name="submit"><a class="submit-btn">Save</a></button>
-                        <button class="submit-btnn" name="submit" ><a class="submit-btnn" href="dr1admin.php">Cancel</a></button>
+                        <button class="submit-btnn" name="submit" ><a class="submit-btnn" href="dr3admin.php">Cancel</a></button>
                          </div>      
                        
                 </form>

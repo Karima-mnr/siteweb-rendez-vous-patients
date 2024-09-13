@@ -8,7 +8,9 @@ session_start();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="style.css" />
   <title>Sign in & Sign up Form</title>
   <style>
@@ -55,8 +57,9 @@ session_start();
     <div class="forms-container">
       <div class="signin-signup">
         <form action="" method="POST" class="sign-in-form">
-        <?php
-                           
+  
+          <h2 class="title">Sign in</h2>
+                <?php                          
 
                            if(isset($_POST['submit'])) {
                                $email = $_POST['email']; // Using 'name' for email input, as per HTML form
@@ -67,10 +70,10 @@ session_start();
 
                                // Prepare and execute the query to fetch user data
                                $sql = "SELECT * FROM user_form WHERE email = ?";
-                               $stmt = mysqli_prepare($conn, $sql);
-                               mysqli_stmt_bind_param($stmt, "s", $email);
-                               mysqli_stmt_execute($stmt);
-                               $result = mysqli_stmt_get_result($stmt);
+                               $stmt = mysqli_prepare($conn, $sql); //prepares the SQL statement for execution.
+                               mysqli_stmt_bind_param($stmt, "s", $email); // binds the email parameter to the prepared statement.
+                               mysqli_stmt_execute($stmt); // executes the prepared statement.
+                               $result = mysqli_stmt_get_result($stmt); // retrieves the result set from the executed statement.
 
                                if($row = mysqli_fetch_assoc($result)) {
                                    // Verify password
@@ -85,20 +88,7 @@ session_start();
                                         $_SESSION['admin'] = $row['fullName'];
                                         header('location: middlepage.php');
                                        } 
-                                       
-                                      /*
-                                       header("Location: ./home.php"); // Redirect to home page
-                                       exit(); */
-                                   }
-                                   
-                                   else if($row['user_type'] == 'admin'){
-                                    $_SESSION['admin'] = $row['fullName'];
-                                    header('location: OTP.php');
-                                   }else if($row['user_type'] == 'user'){
-                                    $_SESSION['admin'] = $row['fullName'];
-                                    header('location: contact.php');
-                                   } 
-                                   
+                                   }                                                  
                                    else {
                                        // Password is incorrect
                                        echo "<div class='alert alert-danger'>Incorrect password</div>";
@@ -109,7 +99,6 @@ session_start();
                                }
                            }
                            ?>
-          <h2 class="title">Sign in</h2>
          
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -122,6 +111,7 @@ session_start();
           <div class="Forget-Pass">
           <a href="Forget.php" class="Forget">Forget Password ?</a></div>
           <input type="submit" name="submit" value="Login" class="btn solid" />
+          
           <p class="social-text">Or Sign in with social platforms</p>
           <div class="social-media">
             <a href="#" class="social-icon">
@@ -156,7 +146,7 @@ session_start();
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

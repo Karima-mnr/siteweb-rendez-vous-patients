@@ -7,7 +7,7 @@ include "db_conn.php";
     <head>
       <meta charset="UTF-8" />
       <title>Dashboard DR2 Admin</title>
-      <link rel="stylesheet" href="dr1user.css" />
+      <link rel="stylesheet" href="dr1userr.css" />
       <!-- Font Awesome Cdn Link -->
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
@@ -88,40 +88,6 @@ include "db_conn.php";
                              ?>  
                         </div>  
                 </div>
-             
-             <style>
-                    .title{
-                        font-size: 30px;
-                        color: #51afe9;
-                        filter: drop-shadow(0 0 2px #51afe9);
-                        margin-left: 20px;
-                    }
-                    .mb-0{
-                        font-size: 40px;
-                        margin-left: 108px;
-                    }
-                    .patient--card{
-                        bottom: 150px;
-                        position: relative;
-                        float: left;
-                         margin-left: 900px;
-                        background: rgba(229,223,223);
-                        border-radius: 20px;
-                        padding: 1.2rem;
-                        width: 290px;
-                        height: 150px;
-                        display:flex;
-                        
-                        align-items: center;
-                        transition: all 0.5s ease-in-out;
-
-                    }
-                  
-                                
-
-             </style>
-
-
           </div>
 
 <!----------------------------------------------------------->
@@ -147,82 +113,14 @@ include "db_conn.php";
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
               }
-              
-  /*
-              if(isset($_GET['date']) && $_GET['date'] !=''){
-                $date= validate($_GET['date']);
-                $enguires= mysqli_query($conn , "SELECT * FROM patient_dr1 WHERE date='$date' ORDER BY ID DESC" );
-             }else{
-               $enguires= mysqli_query($conn , "SELECT * FROM patient_dr1  ORDER BY ID DESC" );
-             }
-             if($enguires){
-                if( mysqli_num_rows($enguires ) >0){
-  */
               ?> 
-                        <style>
-                         
-                          .h1{
-                            margin-right: 70px;
-                            color: #51afe9;
-                            filter: drop-shadow(0 0 5px #a7dcfe);
-                            font-size: 25px;
-                          }                  
-                          .search{
-                            height: 60px;
-                            border: none;
-                            border-radius: 20px;
-                            width: 240px;
-                            font-weight: 800;
-                            font-size: 19px;
-                          
-                          }
-                          .btn{
-                            width: 100px;
-                            height: 34px;
-                            font-size: 17px;
-                            text-transform: uppercase;
-                            border-radius: 20px;
-                            background-color: #51afe9;
-                            color: #fff;
-                          }
-                            
-                            .alert {
-                              padding: 1rem;
-                              border-radius: 15px;
-                              color: white;
-                              margin: 1rem 0;
-                              font-weight: 500;
-                              width: 65%;
-                              text-align: center;
-                          
-                            }
-  
-                            .alert-success {
-                                background-color: #42ba96;
-                                width: 370px;
-                            }
-  
-                              .alert-danger {
-                                  background-color: #fc5555;
-                              }
-                      
-                              .alert-info {
-                                  background-color: #51afe9;
-                              }
-                      
-                              .alert-warning {
-                                  background-color: #ff9966;
-                              }
-                             
-                      
-                        </style>
-                        
-                        <table  class="table table-hover text-center" > 
+   
+           <table  class="table table-hover text-center" > 
             <?php 
               if(isset($_POST['submit'])){ 
                 $search=$_POST['search']; 
                 include "db_conn.php"; 
-                $sql="SELECT * FROM `patient_dr2` WHERE ID like '%$search%' or first_name like '%$search%'"; 
+                $sql="SELECT * FROM `patient_dr2` WHERE ID like '%$search%' or first_name like '%$search%' or last_name like '%$search%' or date like '%$search%'"; 
                 $result=mysqli_query($conn ,$sql); 
                 if($result){ 
                 if(mysqli_num_rows($result)>0){ 
@@ -346,7 +244,86 @@ include "db_conn.php";
                       }    
      
                     ?> 
-                     <style>
+                   <style>
+                     .title{
+                        font-size: 30px;
+                        color: #51afe9;
+                        filter: drop-shadow(0 0 2px #51afe9);
+                        margin-left: 20px;
+                    }
+                    .mb-0{
+                        font-size: 40px;
+                        margin-left: 108px;
+                    }
+                    .patient--card{
+                        bottom: 150px;
+                        position: relative;
+                        float: left;
+                         margin-left: 900px;
+                        background: rgba(229,223,223);
+                        border-radius: 20px;
+                        padding: 1.2rem;
+                        width: 290px;
+                        height: 150px;
+                        display:flex;
+                        
+                        align-items: center;
+                        transition: all 0.5s ease-in-out;
+
+                    }
+                    .h1{
+                            margin-right: 70px;
+                            color: #51afe9;
+                            filter: drop-shadow(0 0 5px #a7dcfe);
+                            font-size: 25px;
+                          }                  
+                          .search{
+                            height: 60px;
+                            border: none;
+                            border-radius: 20px;
+                            width: 240px;
+                            font-weight: 800;
+                            font-size: 19px;
+                          
+                          }
+                          .btn{
+                            width: 100px;
+                            height: 34px;
+                            font-size: 17px;
+                            text-transform: uppercase;
+                            border-radius: 20px;
+                            background-color: #51afe9;
+                            color: #fff;
+                          }
+                            
+                            .alert {
+                              padding: 1rem;
+                              border-radius: 15px;
+                              color: white;
+                              margin: 1rem 0;
+                              font-weight: 500;
+                              width: 65%;
+                              text-align: center;
+                          
+                            }
+  
+                            .alert-success {
+                                background-color: #42ba96;
+                                width: 370px;
+                            }
+  
+                              .alert-danger {
+                                  background-color: #fc5555;
+                              }
+                      
+                              .alert-info {
+                                  background-color: #51afe9;
+                              }
+                      
+                              .alert-warning {
+                                  background-color: #ff9966;
+                              }
+                  
                             .btn_success{
                                 width: 10px;
                                 color: green;

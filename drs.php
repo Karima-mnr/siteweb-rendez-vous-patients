@@ -16,7 +16,7 @@
             <a href="services.php">Services</a>
             <a href="drs.php">Doctors</a>
             <a href="contact.php">Contact us</a>
-            <button   class="btnLogin-popup"><a href="signIn.php" class="btnLogin-popup">Sign up / in </a></button> 
+            <button   class="btnLogin-popup"><a href="signUp.php" class="btnLogin-popup">Sign up / in </a></button> 
             
 
         </nav> 

@@ -6,7 +6,7 @@ include "db_conn.php";
     <head>
       <meta charset="UTF-8" />
       <title>Dashboard DR1</title>
-      <link rel="stylesheet" href="dr1user.css" />
+      <link rel="stylesheet" href="dr1userr.css" />
       <!-- Font Awesome Cdn Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -75,54 +75,7 @@ include "db_conn.php";
           <section class="attendance">
             <div class="attendance-list">
               <h1>Patients List</h1>
-              <?php
-              
-              if (isset($_GET["msg"])) {
-                $msg = $_GET["msg"];
-                echo '<div class="alert alert-success" role="alert">
-                
-                ' . $msg . '
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-              }
-              
-  /*
-              if(isset($_GET['date']) && $_GET['date'] !=''){
-                $date= validate($_GET['date']);
-                $enguires= mysqli_query($conn , "SELECT * FROM patient_dr1 WHERE date='$date' ORDER BY ID DESC" );
-             }else{
-               $enguires= mysqli_query($conn , "SELECT * FROM patient_dr1  ORDER BY ID DESC" );
-             }
-             if($enguires){
-                if( mysqli_num_rows($enguires ) >0){
-  */
-              ?>
-                  
-
-              <style>
-                h1{
-                  color: #51afe9;
-                  filter: drop-shadow(0 0 5px #a7dcfe);
-                  font-size: 25px;
-                 }
-                 .alert {
-                              padding: 1rem;
-                              border-radius: 15px;
-                              color: white;
-                              margin: 1rem 0;
-                              font-weight: 500;
-                              width: 65%;
-                              text-align: center;
-                             
-                            }
-  
-                            .alert-success {
-                                background-color: #42ba96;
-                                width: 370px;
-                            }
-
-              </style>
-            
+     
               <?php
               
                   if (isset($_GET["msg"])) {
@@ -155,6 +108,7 @@ include "db_conn.php";
                      while ($row = mysqli_fetch_assoc($result)) {
                   ?>
                   <tr>
+                  
                     <td><?php echo $row['ID'] ?></td>
                     <td><?php echo $row['first_name'] ?></td>
                     <td><?php echo $row['last_name'] ?></td>
@@ -175,6 +129,29 @@ include "db_conn.php";
                  
                 </tbody>
               </table>
+               <style>
+                h1{
+                  color: #51afe9;
+                  filter: drop-shadow(0 0 5px #a7dcfe);
+                  font-size: 25px;
+                 }
+                 .alert {
+                              padding: 1rem;
+                              border-radius: 15px;
+                              color: white;
+                              margin: 1rem 0;
+                              font-weight: 500;
+                              width: 65%;
+                              text-align: center;
+                             
+                            }
+  
+                            .alert-success {
+                                background-color: #42ba96;
+                                width: 370px;
+                            }
+
+              </style>
             </div>
           </section>
         </section>

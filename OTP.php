@@ -38,9 +38,6 @@ if(isset($_POST['submitt'])) {
             background-color: #fc5555;
 
         }
-
-
-
     </style>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,4 @@
+/*
 const wrapper=document.querySelector('.wrapper');
 const registerlink=document.querySelector('.register-link');
 const loginlink=document.querySelector('.login-link');
@@ -19,4 +20,4 @@ iconclose.onclick= () =>{
     wrapper.classList.remove('active-popup');
     wrapper.classList.remove('active');
 
-};
+}; */

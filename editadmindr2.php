@@ -71,31 +71,32 @@ if (isset($_POST["submit"])) {
                             <label for="female" class="form-input-label">Female</label>
                          </div> 
                          
+   
                          <div class="form-group">
                             <label class="gender">Blood Group:</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="A+" value="A+">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="A+" value="A+" <?php echo ($row["groupBlood"] == 'A+') ? "checked" : ""; ?>>
                             <label for="male" class="form-input-label">A+</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="A-" value="A-">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="A-" value="A-" <?php echo ($row["groupBlood"] == 'A-') ? "checked" : ""; ?>>
                             <label for="female" class="form-input-label">A-</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="B+" value="B+">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="B+" value="B+" <?php echo ($row["groupBlood"] == 'B+') ? "checked" : ""; ?>>
                             <label for="male" class="form-input-label">B+</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="B-" value="B-">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="B-" value="B-" <?php echo ($row["groupBlood"] == 'B-') ? "checked" : ""; ?>>
                             <label for="female" class="form-input-label">B-</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="AB+" value="AB+">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="AB+" value="AB+" <?php echo ($row["groupBlood"] == 'AB+') ? "checked" : ""; ?>>
                             <label for="male" class="form-input-label">AB+</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="O-" value="O-">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="O-" value="O-" <?php echo ($row["groupBlood"] == 'O-') ? "checked" : ""; ?>>
                             <label for="female" class="form-input-label">O-</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="O+" value="O+">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="O+" value="O+" <?php echo ($row["groupBlood"] == 'O+') ? "checked" : ""; ?>>
                             <label for="male" class="form-input-label">O+</label>
                             &nbsp;
-                            <input type="radio" class="form-check-input" name="groupBlood" id="AB-" value="AB-">
+                            <input type="radio" class="form-check-input" name="groupBlood" id="AB-" value="AB-" <?php echo ($row["groupBlood"] == 'AB-') ? "checked" : ""; ?>>
                             <label for="female" class="form-input-label">AB-</label>
 
                          </div>

@@ -18,7 +18,6 @@ if (isset($_POST["submit"])) {
     echo "Failed: " . mysqli_error($conn);
  }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

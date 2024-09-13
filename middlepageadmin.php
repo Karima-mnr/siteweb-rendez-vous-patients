@@ -39,6 +39,10 @@
               <i class="fas fa-cog"></i>
               <span class="nav-item">Setting</span>
             </a></li>
+            <li><a href="signIn.php" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
           </ul>
         </nav>
            
